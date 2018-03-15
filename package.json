@@ -1,0 +1,44 @@
+{
+  "name": "zoo",
+  "version": "1.0.0",
+  "description": "zoo ethereum web wallet",
+  "main": "server.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "element-theme-default": "^1.4.13",
+    "element-ui": "^1.4.2",
+    "es6-promise": "^4.2.4",
+    "express": "^4.16.3",
+    "file-loader": "^1.1.11",
+    "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.16",
+    "vuex": "^3.0.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-middleware": "^3.0.1",
+    "webpack-hot-middleware": "^2.21.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "node_modules/.bin/webpack",    
+    "watch": "node_modules/.bin/webpack --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
