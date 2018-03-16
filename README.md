@@ -3,6 +3,6 @@
 ## Running the App in development environment
 
 - npm install
-- npm run bulid
+- npm run build
 - npm start
 - npm run watch
