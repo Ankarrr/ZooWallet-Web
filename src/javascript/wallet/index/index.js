@@ -1,17 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './app.vue'
+import Navbar from './navbar.vue'
 import {store} from "../store/store"
+import BootstrapVue from 'bootstrap-vue'
 
 require("jsappbase/vuebase.js")
 Vue.use(Vuex)
-/*
-Vue.component('my-component', {
-  template: '<div>Test component</div>'
-})
-*/
+Vue.use(BootstrapVue);
+
 new Vue({
   el: "#app",
-  components: {App},
+  components: {App, Navbar},
   store,
 })

@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "bootstrap-vue": "^2.0.0-rc.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.5"
@@ -36,7 +37,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "node_modules/.bin/webpack",    
+    "build": "node_modules/.bin/webpack",
     "watch": "node_modules/.bin/webpack --watch"
   },
   "author": "",

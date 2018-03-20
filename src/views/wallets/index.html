@@ -4,22 +4,14 @@
     <link rel="stylesheet" href="css/base.css">
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container-fluid">
-        <ul class="navbar-nav" sytle="visibility: visible;">
-         <li class="nav-item active">
-           <a class="nav-link" href="/wallet">Zoo Wallet</a>
-         </li>
-      </div>
-    </nav>
     <script src="wallet_index.js" async></script>
-
-    <div class="container-fluid" id="container-body" role="main">
-      <div class="row justify-content-md-center" id="app">
-        <app></app>
+    <div id="app">
+      <navbar></navbar>
+      <div class="container-fluid" id="container-body" role="main">
+        <div class="row justify-content-md-center">
+          <app></app>
+        </div>
       </div>
     </div>
-
   </body>
 </html>  
