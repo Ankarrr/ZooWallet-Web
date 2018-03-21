@@ -2,7 +2,7 @@
   <div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <h4>Contract</h4>
+        <h5>Contract</h5>
       </div>
       <div>
         <span>Address</span>
@@ -23,7 +23,7 @@
     <br />
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <h4>Contract Functions</h4>
+        <h5>Contract Functions</h5>
       </div>
       <div>
         <myfunc :mtext="abicontext"></myfunc>
@@ -48,7 +48,7 @@ export default {
     },
     methods: {
         generateContract(){
-        console.log(this.abicontext)
+            console.log(this.abicontext)
         }
     }
 }
