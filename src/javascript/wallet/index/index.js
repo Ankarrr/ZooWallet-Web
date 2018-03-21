@@ -8,10 +8,10 @@ import BootstrapVue from 'bootstrap-vue'
 
 require("jsappbase/vuebase.js")
 Vue.use(Vuex)
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue)
 
 new Vue({
   el: "#app",
   components: {App, Navbar, Sidebar},
-  store,
+  store: store,
 })
