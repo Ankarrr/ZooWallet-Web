@@ -1,12 +1,16 @@
 <template>
   <div class="col-2">
-   <el-menu
+
+    <el-card class="box-card">
+      <div>
+        <h5>Your Account</h5>
+        <span class="time">{{ account }}</span>
+      </div>
+    </el-card>
+    <el-menu
       @open="handleOpen"
       @close="handleClose"
-      :default-openeds="['2', '3']">
-      <el-menu-item index="1">
-        <span slot="title">Account {{ account }}</span>    
-      </el-menu-item>         
+      :default-openeds="['2', '3']">      
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-menu"></i>
@@ -30,32 +34,37 @@
 </template>
 
 <script>
-  export default {
-    data() {
-        return {
-            // This is test Data
-            account: "0x123ABC",
-            tokens: [
-                ["ETH", 2.0],
-                ["EOS", 1.2]
-            ],
-            contracts: [
-                "CryptoKitties",
-                "Bancor"
-            ]
-        }
-    },
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
+import {store} from "../store/store"
+
+export default {
+  data() {
+      return {
+          account: store.state.web3.eth.accounts[0],
+          // This is test Data
+          tokens: [
+              ["ETH", 2.0],
+              ["EOS", 1.2]
+          ],
+          contracts: [
+              "CryptoKitties",
+              "Bancor"
+          ]
       }
+  },
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
     }
   }
+}
 </script>
 
 <style>
-
+  .time {
+    font-size: 14px;
+    color: #999;
+  }
 </style>
