@@ -12,10 +12,6 @@ app.get('/wallet', function(req, res) {
     res.sendFile(__dirname + '/src/views/wallets/index.html');
 })
 
-app.get('/test', function(req, res) {
-    res.sendFile(__dirname + '/src/views/test.html');
-})
-
 app.use(express.static('dist'));
 
 app.listen(port, function(error){
