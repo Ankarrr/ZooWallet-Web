@@ -3,8 +3,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    test: './src/javascript/test.js',
-    wallet_index: './src/javascript/wallet/index/index.js',
+    wallet_index: './src/javascript/wallet/index.js',
     app: './src/javascript/wallet/base/app.js',
     base: './src/styles/base.scss'
   },

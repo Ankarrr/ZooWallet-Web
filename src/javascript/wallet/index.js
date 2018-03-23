@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import App from './app.vue'
-import Navbar from './navbar.vue'
-import Sidebar from './sidebar.vue'
-import {store} from "../store/store"
+import App from './components/app.vue'
+import Navbar from './components/navbar.vue'
+import Sidebar from './components/sidebar.vue'
+import {store} from './store/store'
 import BootstrapVue from 'bootstrap-vue'
 
 require("jsappbase/vuebase.js")
