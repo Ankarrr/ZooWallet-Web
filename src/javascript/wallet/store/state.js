@@ -4,9 +4,9 @@
 // set the provider of web3
 if (typeof web3 !== 'undefined') {
   // web3 = new Web3(web3.currentProvider)
-  console.log("Get web3 provider")
+  console.log("Find web3 provider.")
 } else {
-  alert("No currentProvider for web3")
+  alert("No currentProvider for web3. Please install MetaMask.")
 }
 
 const state = {
