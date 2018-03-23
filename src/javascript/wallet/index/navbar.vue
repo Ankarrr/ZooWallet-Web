@@ -22,10 +22,12 @@
 </template>
 
 <script>
+import {store} from "../store/store"
+
 export default {
   data() {
       return {
-          network: web3.version.network
+          network: store.state.web3.version.network
       }
   },
   methods: {
