@@ -12,7 +12,8 @@ if (typeof web3 !== 'undefined') {
 const state = {
   count: 0,
   funcationName: "",
-  web3: web3
+  web3: web3,
+  account: ""
 }
 
 export {state}

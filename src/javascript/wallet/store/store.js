@@ -13,6 +13,9 @@ const store = new Vuex.Store({
     setFuncation(state, funcationName){
       state.funcationName = funcationName
     },
+    updateAccount(){
+      state.account = store.state.web3.eth.accounts[0]
+    },
   }
 })
 
