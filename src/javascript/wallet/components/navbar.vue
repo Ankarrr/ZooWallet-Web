@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="info" class="">
+  <b-navbar toggleable="md" type="dark" variant="" class="nav-bar">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     <b-navbar-brand href="/wallet">Zoo Wallet</b-navbar-brand>
     <b-collapse is-nav id="nav_collapse">
@@ -39,5 +39,7 @@ export default {
 </script>
 
 <style>
-
+  .nav-bar {
+    background-color: #409EFF;
+  }
 </style>
