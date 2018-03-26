@@ -4,7 +4,7 @@
       <div>
         <h5>Your Account</h5>
         <div class="account">{{ account }}</div>
-        <div class="account">{{ eth_balance }}  <span class="text-left">ETH</span></div>
+        <div class="account">{{ eth_balance }} ETH</div>
       </div>
     </el-card>
     <el-menu
@@ -16,18 +16,16 @@
           <i class="el-icon-menu"></i>
           <span>Tokens</span>
         </template>
-        <el-menu-item-group v-for="token in tokens">
-          <el-menu-item index="">{{ token[1] }}  <span class="text-left">{{ token[0] }}</span></el-menu-item>
-        </el-menu-item-group>
+        <el-menu-item class="submenu-item" v-for="token in tokens" :key="token.id" :index="'1-1-' + token[0]">{{ token[1] }} {{ token[0] }}</el-menu-item>
+        <el-menu-item index="1-2" class="submenu-add-button"><i class="el-icon-plus"></i> Add Token</el-menu-item>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-menu"></i>
           <span>Contracts</span>
         </template>
-        <el-menu-item-group v-for="contract in contracts">
-          <el-menu-item index="">{{ contract }}</el-menu-item>
-        </el-menu-item-group>
+        <el-menu-item class="submenu-item" v-for="contract in contracts" :key="contract.id" :index="'2-1-' + contract">{{ contract }}</el-menu-item>
+        <el-menu-item index="2-2" class="submenu-add-button"><i class="el-icon-plus"></i> Add Contract</el-menu-item>
       </el-submenu>
     </el-menu>
   </div>
@@ -42,7 +40,8 @@ export default {
         account: "",
         eth_balance: 0,
         tokens: [
-            ["EOS", 1.2]
+            ["EOS", 1.2],
+            ["MANA", 4.56]
         ],
         contracts: [
             "CryptoKitties",
@@ -100,7 +99,14 @@ export default {
 <style>
   .account {
     font-size: 14px;
-    color: #999;
+    color: #909399;
     padding-bottom: 5px;
+  }
+  .submenu-item {
+    color: #909399;
+;
+  }
+  .submenu-add-button {
+    color: #C0C4CC;
   }
 </style>
