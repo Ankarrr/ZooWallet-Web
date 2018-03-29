@@ -9,8 +9,8 @@
       <navbar></navbar>
       <div class="container-fluid" id="container-body" role="main">
         <div class="row justify-content-md-center">
-          <sidebar></sidebar>
-          <app></app>
+          <sidebar @open-contract-tab="openTab"></sidebar>
+          <app :new-active-name="newActiveName" @on-tab-change="onTabChange"></app>
         </div>
       </div>
     </div>

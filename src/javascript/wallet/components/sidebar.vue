@@ -24,7 +24,7 @@
           <i class="el-icon-menu"></i>
           <span>Contracts</span>
         </template>
-        <el-menu-item class="submenu-item" v-for="contract in contracts" :key="contract.id" :index="'2-1-' + contract">{{ contract }}</el-menu-item>
+        <el-menu-item class="submenu-item" v-for="contract in contracts" :key="contract.id" :index="'2-1-' + contract" v-on:click="openContract(contract)">{{ contract }}</el-menu-item>
         <el-menu-item index="2-2" class="submenu-add-button"><i class="el-icon-plus"></i> Add Contract</el-menu-item>
       </el-submenu>
     </el-menu>
@@ -45,7 +45,7 @@ export default {
         ],
         contracts: [
             "CryptoKitties",
-            "Bancor"
+            "Kyber"
         ]
     }
   },
@@ -55,6 +55,10 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    openContract(contract) {
+      this.$emit('open-contract-tab', 'third')
+      store.commit('updateContract', contract)
     },
     setAccount() {
       if (store.state.web3.eth.accounts[0] === undefined) {

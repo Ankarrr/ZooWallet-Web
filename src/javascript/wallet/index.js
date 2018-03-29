@@ -14,4 +14,15 @@ new Vue({
   el: "#app",
   components: {App, Navbar, Sidebar},
   store: store,
+  data: {
+    newActiveName: ''
+  },
+  methods: {
+    openTab(name) {
+      this.newActiveName = name
+    },
+    onTabChange(tabName) {
+      this.newActiveName = tabName
+    }
+  }
 })

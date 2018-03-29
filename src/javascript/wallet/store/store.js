@@ -16,6 +16,9 @@ const store = new Vuex.Store({
     updateAccount(){
       state.account = store.state.web3.eth.accounts[0]
     },
+    updateContract(state, contract){
+      state.currentContract = contract
+    }
   }
 })
 

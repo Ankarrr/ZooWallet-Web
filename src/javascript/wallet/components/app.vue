@@ -19,12 +19,19 @@ export default {
   components: {Contract},
   data() {
     return {
+      // activeName decides which tab is open
       activeName: 'third'
-    };
+    }
   },
   methods: {
     handleClick(tab, event) {
-      console.log(tab, event)
+      this.$emit("on-tab-change", this.activeName)
+    },
+  },
+  props: ['newActiveName'],
+  watch: {
+    newActiveName() {
+      this.activeName = this.newActiveName
     }
   }
 }
