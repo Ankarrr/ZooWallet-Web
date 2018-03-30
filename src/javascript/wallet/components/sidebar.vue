@@ -106,10 +106,9 @@ export default {
     padding-bottom: 5px;
   }
   .submenu-item {
-    color: #909399;
-;
+    color: #606266;
   }
   .submenu-add-button {
-    color: #C0C4CC;
+    color: #909399;
   }
 </style>
