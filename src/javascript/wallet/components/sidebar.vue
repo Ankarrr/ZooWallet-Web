@@ -37,16 +37,8 @@ import {store} from "../store/store"
 export default {
   data() {
     return {
-        account: "",
-        eth_balance: 0,
-        tokens: [
-            ["EOS", 1.2],
-            ["MANA", 4.56]
-        ],
-        contracts: [
-            "CryptoKitties",
-            "Kyber"
-        ]
+      account: "",
+      eth_balance: 0,
     }
   },
   methods: {
@@ -88,9 +80,16 @@ export default {
       })
     }
   },
+  computed: {
+    contracts() {
+      return store.state.contractList
+    },
+    tokens() {
+      return store.state.tokenList
+    }
+  },
   mounted() {
     this.setAccount()
-
   },
   watch: {
     account() {

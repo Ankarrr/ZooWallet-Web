@@ -14,6 +14,14 @@ const state = {
   funcationName: "",
   web3: web3,
   account: "",
+  tokenList: [
+    ["EOS", 1.2],
+    ["MANA", 4.56]
+  ],
+  contractList: [
+    "CryptoKitties",
+    "Kyber"
+  ],
   currentContract: "",
   contracts: {
     Kyber: {
