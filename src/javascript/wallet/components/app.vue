@@ -4,7 +4,8 @@
       <el-tab-pane label="Send" name="first">Send</el-tab-pane>
       <el-tab-pane label="Transactions" name="second">Transactions</el-tab-pane>
       <el-tab-pane label="Contract" name="third"><contract></contract></el-tab-pane>
-      <el-tab-pane label="Exchange" name="fourth">Exchange</el-tab-pane>
+      <el-tab-pane label="Market" name="fourth">Market information</el-tab-pane>
+      <el-tab-pane label="Exchange" name="fifth">Exchange</el-tab-pane>
     </el-tabs>
   </div>
 </template>
