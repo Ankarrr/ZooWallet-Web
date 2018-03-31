@@ -1,20 +1,29 @@
 <template>
-  <div>
+  <div class="container-fluid">
     <!-- {{count}} -->
-    <el-select
-      v-model="selectedItem"
-      placeholder="Select a function"
-      :change="selectedFunction()"
-      class="input-field">
-      <el-option
-        v-for="item in msg"
-        :key="item.name"
-        :label="item.name"
-        :value="item.name">
-      </el-option>
-    </el-select>
-    <div v-if="params">
-      <uwapper :items="params"></uwapper>
+    <div class="row">
+      <div class="col">
+        <el-select
+          v-model="selectedItem"
+          placeholder="Select a function"
+          :change="selectedFunction()"
+          class="input-field">
+          <el-option
+            v-for="item in msg"
+            :key="item.name"
+            :label="item.name"
+            :value="item.name">
+          </el-option>
+        </el-select>
+        <div v-if="params">
+          <uwapper :selected-item="selectedItem" :params="params" :contract-addr="address" :abi-context="mtext" @update-result="updateResult"></uwapper>
+        </div>
+      </div>
+      <div class="col">
+        <el-card class="result-field">
+          {{ result }}
+        </el-card>
+      </div>
     </div>
   </div>
 </template>
@@ -28,6 +37,7 @@ export default {
   components: {Uwapper},
   props: {
     mtext: String,
+    address: String,
     render: Boolean,
   },
   computed: {
@@ -40,6 +50,7 @@ export default {
       msg: "hello",
       selectedItem: "",
       params: [],
+      result: "",
     }
   },
   mounted() {
@@ -64,6 +75,9 @@ export default {
       return _.filter(this.msg, (resp) => {
         return resp.name == funcName
       })
+    },
+    updateResult(ret){
+      this.result = ret
     }
   },
   watch:{
@@ -76,6 +90,9 @@ export default {
 
 <style>
   .input-field{
+    margin: 5px 0;
+  }
+  .result-field{
     margin: 5px 0;
   }
 </style>

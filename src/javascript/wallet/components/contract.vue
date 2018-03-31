@@ -26,7 +26,7 @@
         <h5>Contract Functions</h5>
       </div>
       <div>
-        <myfunc :mtext="abiContext"></myfunc>
+        <myfunc :mtext="abiContext" :address="contractAddr"></myfunc>
       </div>
     </el-card>
   </div>
