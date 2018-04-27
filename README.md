@@ -1,3 +1,5 @@
+This repo is deprecated. Please go to https://github.com/ZooWallet/ZooWallet-Web.
+
 # Zoo Ethereum Web Wallet
 
 An Open Source project aims to build a friendly Web interface of Ethereum. Features:
